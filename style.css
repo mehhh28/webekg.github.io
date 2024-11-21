@@ -1,0 +1,84 @@
+body {
+  background: radial-gradient(transparent, #c34d5c);
+}
+.container {
+  margin: 0 auto;
+  display: block;
+  width: 1000px;
+}
+.ecg-bg {
+  width: 814px;
+  height: 640px;
+  margin: 0 auto;
+  background: url(./ecg-front.png) no-repeat center;
+}
+
+.ecg-screen {
+  position: relative;
+  padding: 77px 135px 60px 80px;
+  height: 458px;
+}
+
+.ecg-header {
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+aside {
+  position: absolute;
+  right: 16px;
+  top: 50px;
+  height: 491px;
+  width: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+aside button {
+  height: 88px;
+  opacity: 0;
+}
+
+.ecg-value {
+  padding: 1rem;
+  display: flex;
+  gap: 5px;
+}
+
+.ecg-value dd {
+  flex: 1;
+  margin: 0;
+  text-align: right;
+  font-family: monospace;
+  white-space: nowrap;
+}
+.ecg-value dd span {
+  font-size: 2rem;
+}
+
+.heart-beat-viz {
+  position: absolute;
+  right: 132px;
+  top: 200px;
+  padding: 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.heart-beat {
+  transition: font-size 50ms;
+}
+
+g.x.axis {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+path.line {
+  transform: translateZ(0);
+}

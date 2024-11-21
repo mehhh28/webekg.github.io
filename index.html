@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECG</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/comfey@2.2.0/comfey.min.css
+"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="ecg" class="ecg-bg">
+        <div class="ecg-screen">
+          <header class="ecg-header">
+            <div class="ecg-value">
+              <dt>Freq</dt>
+              <dd><span data-bind="freq"></span> Hz</dd>
+            </div>
+
+            <div class="ecg-value">
+              <dt>RR</dt>
+              <dd><span data-bind="rr"></span> ms</dd>
+            </div>
+            <div class="ecg-value">
+              <dt>HR</dt>
+              <dd><span data-bind="hr"></span> bpm</dd>
+            </div>
+          </header>
+          <aside>
+            <button id="pause-btn">Pause/Play</button>
+          </aside>
+          <div class="heart-beat-viz">
+            <span
+              class="heart-beat"
+              data-bind-attr="value::style::font-size: $px"
+              >❤️</span
+            >
+          </div>
+          <main class="ecg-graph"></main>
+        </div>
+      </div>
+    </div>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script type="module" src="./client.js"></script>
+  </body>
+</html>
